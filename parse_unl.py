@@ -20,9 +20,10 @@ def rippled_bs58(key):
         string = alphabet[idx:idx+1] + string
     return string
 
-def unl_parser(address):
+def unl_parser(address='https://vl.ripple.com'):
     '''
     Download the UNL and base64 decode the blob.
+    Defaults to https://vl.ripple.com
     Individual validation keys are then constructed from the decoded blob
     payload and the double sha256 hashed checksums. Keys are then base58 encoded.
     '''
